@@ -30,7 +30,7 @@ header > h1 {
 }
 
 main {
-  padding: 10px 30px;
+  padding: 30px 30px 10px;
 }
 
 .ingredient-form {
@@ -54,8 +54,11 @@ main {
   font-family: monospace;
   border-radius: 6px;
   border: none;
+  width: 150px;
   background: #141413;
   color: #fafaf8;
+  font-size: 0.875rem;
+  font-weight: 500;
 }
 
 .ingredient-form > button::before {
