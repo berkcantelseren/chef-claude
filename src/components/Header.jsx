@@ -1,7 +1,10 @@
+import chefClaudeLogo from "../assets/chef-claude-icon.png";
+
 export default function Header() {
   return (
     <header>
-      <h1>baklava</h1>
+      <img src={chefClaudeLogo} alt="" />
+      <h1>Chef Claude</h1>
     </header>
   );
 }
