@@ -7,22 +7,20 @@ export default function Main() {
     <li key={ingredient}>{ingredient}</li>
   ));
 
-  function handleSubmit(event) {
-    event.preventDefault();
-    const formInputs = new FormData(event.currentTarget);
-    const newIngredient = formInputs.get("ingredient");
+  function addIngredient(formData) {
+    const newIngredient = formData.get("ingredient");
     setIngredients((prevIngredients) => [...prevIngredients, newIngredient]);
   }
 
   return (
     <main>
-      <form onSubmit={handleSubmit} className="ingredient-form">
+      <form action={addIngredient} className="ingredient-form">
         <input
           aria-label="Add ingredient"
           type="text"
           placeholder="e.g. Paprika"
           name="ingredient"
-          autocomplete="off"
+          autoComplete="off"
         />
         <button>Add ingredient</button>
       </form>
