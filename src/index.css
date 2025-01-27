@@ -52,6 +52,11 @@ main {
   flex-grow: 1;
   min-width: 150px;
   max-width: 400px;
+  transition: transform 0.6s ease;
+}
+
+.ingredient-form > input:focus {
+  transform: scale(1.025);
 }
 
 .ingredient-form > button {
@@ -63,11 +68,18 @@ main {
   color: #fafaf8;
   font-size: 0.875rem;
   font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out;
+  will-change: transform;
 }
 
 .ingredient-form > button::before {
   content: "+";
   margin-right: 5px;
+}
+
+.ingredient-form > button:hover {
+  transform: scale(1.04);
 }
 
 ul.ingredients-list {
