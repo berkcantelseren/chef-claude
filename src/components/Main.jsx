@@ -24,7 +24,7 @@ export default function Main() {
         />
         <button>Add ingredient</button>
       </form>
-
+      <p className="tip">( Add 4 or more ingredients to create a recipe )</p>
       {ingredients.length > 0 && (
         <section className="fade-in">
           <h2>Ingredients on hand:</h2>
