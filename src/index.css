@@ -38,6 +38,7 @@ main {
 }
 
 .ingredient-form {
+  position: relative;
   display: flex;
   justify-content: center;
   gap: 12px;
@@ -160,4 +161,25 @@ suggested-recipe-container {
 .suggested-recipe-container ul li,
 .suggested-recipe-container ol li {
   margin-bottom: 8px;
+}
+
+.error-message {
+  background-color: #ff0000;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 5px;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.7rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  white-space: nowrap;
+}
+
+.error-message.hidden {
+  opacity: 0;
 }

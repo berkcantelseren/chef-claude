@@ -5,8 +5,9 @@ import { getRecipeFromMistral } from "../ai";
 
 export default function Main() {
   const [ingredients, setIngredients] = React.useState([]);
-
   const [recipe, setRecipe] = React.useState("");
+  const [errorMessage, setErrorMessage] = React.useState("");
+  const [isErrorVisible, setIsErrorVisible] = React.useState(false);
 
   async function getRecipe() {
     const recipeMarkdown = await getRecipeFromMistral(ingredients);
@@ -16,13 +17,18 @@ export default function Main() {
   function addIngredient(formData) {
     const newIngredient = formData.get("ingredient").trim();
 
-    // Check if input is valid
     if (newIngredient.length < 2) {
-      alert("Please type an ingredient with at least 2 letters.");
-      return; // Stop further execution
+      setErrorMessage("Please type an ingredient with at least 2 letters.");
+      setIsErrorVisible(true);
+      setTimeout(() => {
+        setIsErrorVisible(false);
+      }, 2000);
+      return;
     }
 
     setIngredients((prevIngredients) => [...prevIngredients, newIngredient]);
+    setErrorMessage("");
+    setIsErrorVisible(false);
   }
 
   return (
@@ -36,6 +42,12 @@ export default function Main() {
         }}
         className="ingredient-form"
       >
+        {errorMessage && (
+          <div className={`error-message ${!isErrorVisible ? "hidden" : ""}`}>
+            {errorMessage}
+          </div>
+        )}
+
         <input
           aria-label="Add ingredient"
           type="text"
