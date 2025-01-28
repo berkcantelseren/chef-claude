@@ -14,13 +14,28 @@ export default function Main() {
   }
 
   function addIngredient(formData) {
-    const newIngredient = formData.get("ingredient");
+    const newIngredient = formData.get("ingredient").trim();
+
+    // Check if input is valid
+    if (newIngredient.length < 2) {
+      alert("Please type an ingredient with at least 2 letters.");
+      return; // Stop further execution
+    }
+
     setIngredients((prevIngredients) => [...prevIngredients, newIngredient]);
   }
 
   return (
     <main>
-      <form action={addIngredient} className="ingredient-form">
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          const formData = new FormData(e.target);
+          addIngredient(formData);
+          e.target.reset();
+        }}
+        className="ingredient-form"
+      >
         <input
           aria-label="Add ingredient"
           type="text"
