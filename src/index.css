@@ -101,7 +101,7 @@ ul.ingredients-list > li {
   align-items: center;
   justify-content: center;
   display: flex;
-  padding: 20px;
+  padding: 19px;
   text-decoration: underline;
   text-underline-offset: 7px;
   text-decoration-thickness: 2px;
