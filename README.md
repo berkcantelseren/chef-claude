@@ -22,16 +22,18 @@
 
 ![Home](src/assets/home.png)
 
+<br>
 
 *Example Recipe*
 ![Recipe](src/assets/recipe.png)
 
 ## Mobile Responsive
 
-
 *Mobile Home*
 
 ![Mobile Home](src/assets/mobile-home.jpeg)
+
+<br>
 
 *Mobile Recipe*
 ![Mobile Recipe](src/assets/mobile-recipe.jpeg)
