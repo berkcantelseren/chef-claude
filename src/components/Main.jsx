@@ -15,6 +15,13 @@ export default function Main() {
     const recipeMarkdown = await getRecipeFromMistral(ingredients);
     setRecipe(recipeMarkdown);
     setLoading(false);
+
+    setTimeout(() => {
+      const recipeSection = document.getElementById("recipe-section");
+      if (recipeSection) {
+        recipeSection.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100);
   }
 
   function addIngredient(formData) {
@@ -67,7 +74,7 @@ export default function Main() {
 
       {loading && <p className="loading">Loading...</p>}
 
-      {recipe && <ClaudeRecipe recipe={recipe} />}
+      {recipe && <ClaudeRecipe id="recipe-section" recipe={recipe} />}
     </main>
   );
 }
