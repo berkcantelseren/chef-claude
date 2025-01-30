@@ -1,8 +1,27 @@
-# React + Vite
+# Robo Chef AI Recipe Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+*Robo Chef is an AI-powered recipe generator built with React. Using the Mistral AI model, users can input 4 or more ingredients, and the AI will generate a recipe that incorporates the provided ingredients.*
 
-Currently, two official plugins are available:
+*If you don't know what to cook, ask Robo Chef!*
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Check out live website on Vercel !
+
+*Live ---> <a href="https://robochef.vercel.app/" target="_blank">Robo Chef</a>*
+
+## Features
+
+- **Ingredient Input**: Users provide 4 or more ingredients.
+- **AI Recipe Generation**: The Mistral AI model processes the input ingredients and generates a recipe.
+- **React & useState**: The project is built using React with useState to handle state management.
+
+## Screenshots
+
+
+*Home Page*
+
+![Home](src/assets/home.png)
+
+
+*Example Recipe*
+![Recipe](src/assets/recipe.png)
+  
