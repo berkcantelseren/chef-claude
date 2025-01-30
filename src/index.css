@@ -102,6 +102,9 @@ ul.ingredients-list > li {
   justify-content: center;
   display: flex;
   padding: 20px;
+  text-decoration: underline;
+  text-underline-offset: 7px;
+  text-decoration-thickness: 2px;
 }
 
 .list {
