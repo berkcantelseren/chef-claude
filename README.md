@@ -13,6 +13,7 @@
 - **Ingredient Input**: Users provide 4 or more ingredients.
 - **AI Recipe Generation**: The Mistral AI model processes the input ingredients and generates a recipe.
 - **React & useState**: The project is built using React with useState to handle state management.
+- **Responsive Design**: For the best user experience, I have designed the website to be fully responsive, ensuring optimal viewing on both mobile phones and tablets.
 
 ## Screenshots
 
