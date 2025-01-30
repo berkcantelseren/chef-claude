@@ -204,3 +204,16 @@ suggested-recipe-container {
 .error-message.hidden {
   opacity: 0;
 }
+
+.loading {
+  border: 3px solid #d17557;
+  border-radius: 10px;
+  margin-left: 680px;
+  background: black;
+  color: whitesmoke;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  width: 100px;
+}
