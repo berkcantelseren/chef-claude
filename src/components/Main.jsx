@@ -12,6 +12,14 @@ export default function Main() {
 
   async function getRecipe() {
     setLoading(true);
+
+    setTimeout(() => {
+      const loadingSection = document.querySelector(".loading-box");
+      if (loadingSection) {
+        loadingSection.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    }, 100);
+
     const recipeMarkdown = await getRecipeFromMistral(ingredients);
     setRecipe(recipeMarkdown);
     setLoading(false);
