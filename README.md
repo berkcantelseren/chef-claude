@@ -32,10 +32,3 @@
 *Mobile Home*
 
 ![Mobile Home](src/assets/mobile-home.jpeg)
-
-<br>
-
-*Mobile Recipe*
-![Mobile Recipe](src/assets/mobile-recipe.jpeg)
-
-  
