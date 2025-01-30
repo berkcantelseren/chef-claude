@@ -25,4 +25,15 @@
 
 *Example Recipe*
 ![Recipe](src/assets/recipe.png)
+
+## Mobile Responsive
+
+
+*Mobile Home*
+
+![Mobile Home](src/assets/mobile-home.jpeg)
+
+*Mobile Recipe*
+![Mobile Recipe](src/assets/mobile-recipe.jpeg)
+
   
