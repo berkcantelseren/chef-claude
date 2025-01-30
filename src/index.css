@@ -70,7 +70,7 @@ main {
   font-size: 0.875rem;
   font-weight: 500;
   cursor: pointer;
-  transition: transform 0.1s ease-in-out;
+  transition: transform 0.2s ease-in-out;
   will-change: transform;
 }
 
@@ -90,6 +90,19 @@ ul.ingredients-list {
 ul.ingredients-list > li {
   color: #475467;
   line-height: 28px;
+  margin-left: 605px;
+}
+
+.on-hand {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding: 20px;
+}
+
+.list {
+  padding: 20px;
+  margin-left: 500px;
 }
 
 .get-recipe-container {
@@ -123,6 +136,14 @@ ul.ingredients-list > li {
   font-family: Inter, sans-serif;
   font-size: 0.875rem;
   cursor: pointer;
+  margin-right: 350px;
+  margin-top: 20px;
+  transition: transform 0.2s ease-in-out;
+  will-change: transform;
+}
+
+.get-recipe-container button:hover {
+  transform: scale(1.04);
 }
 
 .fade-in {
