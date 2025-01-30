@@ -8,10 +8,13 @@ export default function Main() {
   const [recipe, setRecipe] = React.useState("");
   const [errorMessage, setErrorMessage] = React.useState("");
   const [isErrorVisible, setIsErrorVisible] = React.useState(false);
+  const [loading, setLoading] = React.useState(false);
 
   async function getRecipe() {
+    setLoading(true);
     const recipeMarkdown = await getRecipeFromMistral(ingredients);
     setRecipe(recipeMarkdown);
+    setLoading(false);
   }
 
   function addIngredient(formData) {
@@ -61,6 +64,8 @@ export default function Main() {
       {ingredients.length > 0 && (
         <IngredientsList ingredients={ingredients} getRecipe={getRecipe} />
       )}
+
+      {loading && <p className="loading">Loading...</p>}
 
       {recipe && <ClaudeRecipe recipe={recipe} />}
     </main>
