@@ -6,9 +6,11 @@ export default function IngredientsList(props) {
   return (
     <section className="fade-in">
       <h2 className="on-hand">Ingredients on hand:</h2>
-      <ul className="ingredients-list" aria-live="polite">
-        {ingredientsListItems}
-      </ul>
+      <div className="box">
+        <ul className="ingredients-list" aria-live="polite">
+          {ingredientsListItems}
+        </ul>
+      </div>
       {props.ingredients.length > 3 && (
         <div className="get-recipe-container fade-in">
           <div className="list">

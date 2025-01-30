@@ -72,7 +72,12 @@ export default function Main() {
         <IngredientsList ingredients={ingredients} getRecipe={getRecipe} />
       )}
 
-      {loading && <p className="loading">Loading...</p>}
+      {loading && (
+        <div className="loading-box">
+          {" "}
+          <p className="loading">Loading...</p>{" "}
+        </div>
+      )}
 
       {recipe && <ClaudeRecipe id="recipe-section" recipe={recipe} />}
     </main>
